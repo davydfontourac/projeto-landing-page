@@ -48,3 +48,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const activeLink = document.querySelector('.nav-link.active');
   if (activeLink) updateIndicator(activeLink);
 });
+
+// Sempre volta para a home ao recarregar a página
+window.addEventListener('DOMContentLoaded', function () {
+  if (window.location.hash && window.location.hash !== '#home') {
+    history.replaceState(
+      null,
+      '',
+      window.location.pathname + window.location.search + '#home'
+    );
+  }
+  window.scrollTo(0, 0);
+});
