@@ -1,43 +1,175 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Landing Page</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Bem-vindo à Minha Landing Page!</h1>
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <div class="logo">Landing<span>Page</span></div>
+      <nav class="scroll-nav">
+        <ul>
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#servicos" class="nav-link">Serviços</a></li>
+          <li><a href="#blog" class="nav-link">Blog</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+        <div class="nav-indicator"></div>
+      </nav>
+      <button class="search-btn">&#128269;</button>
     </header>
 
     <main>
-        <section id="sobre">
-            <h2>Sobre Nós</h2>
-            <p>Conteúdo sobre sua empresa ou projeto.</p>
+      <div class="sections-wrapper horizontal-slider">
+        <!-- HOME -->
+        <section class="hero section-slide" id="home">
+          <div class="section-inner">
+            <div class="section-left">
+              <h1>Inscreva-se agora</h1>
+              <p>
+                Receba novidades e dicas exclusivas para impulsionar seu
+                negócio!
+              </p>
+              <form class="registration-form">
+                <input type="text" placeholder="Nome" required />
+                <input type="email" placeholder="Email" required />
+                <button type="submit">Enviar</button>
+              </form>
+            </div>
+            <div class="section-right">
+              <img
+                src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=400&h=400"
+                alt="Pessoa trabalhando"
+                class="hero-img"
+              />
+            </div>
+          </div>
         </section>
 
-        <section id="servicos">
-            <h2>Nossos Serviços</h2>
-            <p>Descreva os serviços que você oferece.</p>
+        <!-- SERVIÇOS -->
+        <section class="section-slide" id="servicos">
+          <div class="section-inner">
+            <div class="section-left">
+              <h2>Nossos Serviços</h2>
+              <ul class="servicos-list">
+                <li>
+                  <strong>Consultoria em Marketing Digital</strong><br />
+                  Estratégias personalizadas para seu negócio crescer online.
+                </li>
+                <li>
+                  <strong>Gestão de Redes Sociais</strong><br />
+                  Conteúdo criativo e engajamento para sua marca.
+                </li>
+                <li>
+                  <strong>Criação de Sites e Landing Pages</strong><br />
+                  Sites modernos, responsivos e focados em conversão.
+                </li>
+                <li>
+                  <strong>Design Gráfico e Identidade Visual</strong><br />
+                  Visual profissional para destacar sua empresa.
+                </li>
+              </ul>
+            </div>
+            <div class="section-right">
+              <img
+                src="https://img.icons8.com/ios-filled/200/marketing.png"
+                alt="Marketing Digital"
+                class="servicos-img"
+              />
+            </div>
+          </div>
         </section>
 
-        <section id="contato">
-            <h2>Contato</h2>
-            <p>Informações de contato.</p>
+        <!-- BLOG -->
+        <section class="section-slide" id="blog">
+          <div class="section-inner">
+            <div class="section-left">
+              <h2>Blog</h2>
+              <div class="blog-list">
+                <article class="blog-card">
+                  <h3>Como aumentar sua presença digital</h3>
+                  <p>
+                    Dicas práticas para melhorar sua visibilidade online e
+                    atrair mais clientes.
+                  </p>
+                </article>
+                <article class="blog-card">
+                  <h3>5 tendências de marketing para 2025</h3>
+                  <p>
+                    Descubra o que está em alta e como aplicar no seu negócio.
+                  </p>
+                </article>
+              </div>
+            </div>
+            <div class="section-right">
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+                alt="Blog destaque"
+                class="blog-img"
+              />
+            </div>
+          </div>
         </section>
+
+        <!-- SOBRE -->
+        <section class="section-slide" id="sobre">
+          <div class="section-inner">
+            <div class="section-left">
+              <h2>Sobre Nós</h2>
+              <p>
+                Somos uma agência especializada em soluções digitais para
+                empresas que querem crescer e se destacar no mercado.<br />
+                Nossa equipe é formada por profissionais apaixonados por
+                inovação e resultados.
+              </p>
+            </div>
+            <div class="section-right">
+              <img
+                src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=facearea&w=400&h=400"
+                alt="Equipe"
+                class="sobre-img"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section-slide" id="faq">
+          <div class="section-inner">
+            <div class="section-left">
+              <h2>Perguntas Frequentes</h2>
+              <ul class="faq-list">
+                <li>
+                  <strong>Como faço para contratar um serviço?</strong>
+                  <span
+                    >Basta entrar em contato pelo formulário ou pelo nosso
+                    WhatsApp.</span
+                  >
+                </li>
+                <li>
+                  <strong>Quais são as formas de pagamento?</strong>
+                  <span>Aceitamos cartão, boleto e PIX.</span>
+                </li>
+                <li>
+                  <strong>Vocês atendem todo o Brasil?</strong>
+                  <span>Sim, nosso atendimento é 100% online.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="section-right">
+              <img
+                src="https://img.icons8.com/ios-filled/200/faq.png"
+                alt="FAQ"
+                class="faq-img"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
-
-    <footer>
-        <p>&copy; 2025 Seu Nome ou Empresa</p>
-    </footer>
-
-    </body>
+    <script src="main.js"></script>
+  </body>
 </html>
