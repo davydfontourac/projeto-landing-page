@@ -60,3 +60,17 @@ window.addEventListener('DOMContentLoaded', function () {
   }
   window.scrollTo(0, 0);
 });
+
+// Lottie animação na seção Serviços
+document.addEventListener('DOMContentLoaded', function () {
+  const lottieContainer = document.getElementById('lottie-servicos');
+  if (lottieContainer) {
+    lottie.loadAnimation({
+      container: lottieContainer,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'animation_grafic.json', // Caminho relativo ao seu arquivo JSON
+    });
+  }
+});
