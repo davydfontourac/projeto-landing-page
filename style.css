@@ -763,3 +763,42 @@ footer {
   background: #1ebe5d;
   box-shadow: 0 4px 16px #25d36666;
 }
+
+.blob-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.blob-wrapper::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #ffd600 60%, #ffb300 100%);
+  filter: blur(16px) brightness(0.95);
+  border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%;
+  animation: blobMove 6s infinite linear alternate;
+  transition: border-radius 0.5s;
+}
+.blob-wrapper img {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes blobMove {
+  0% {
+    border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    border-radius: 60% 40% 40% 60% / 40% 60% 40% 60%;
+    transform: translate(-50%, -50%) scale(1.07) rotate(-2deg);
+  }
+  100% {
+    border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
